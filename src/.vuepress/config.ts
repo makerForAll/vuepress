@@ -1,0 +1,28 @@
+
+
+import { defineUserConfig } from "vuepress";
+import { hopeTheme } from "vuepress-theme-hope";
+import theme from "./theme.js";
+
+export default defineUserConfig({
+  base: "/",
+
+  lang: "zh-CN",
+  title: "文档演示",
+  description: "vuepress-theme-hope 的文档演示",
+  theme,
+  // theme: hopeTheme({
+  //   // 禁用“编辑此页”链接
+  //   editLink: false,
+
+  //   // 禁用“上一篇/下一篇”链接
+  //   prevLink: true,
+  //   nextLink: false,
+
+  //   // 或者直接禁用整块 page meta（包含编辑此页、更新时间、分类标签等）
+  //   // pageMeta: false,
+  // }),
+
+  // 和 PWA 一起启用
+  // shouldPrefetch: false,
+});
