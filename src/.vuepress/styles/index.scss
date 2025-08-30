@@ -1,1 +1,41 @@
 // place your custom styles here
+/* 仅灰淡并禁用“二级子项”的占位项，父级分组不受影响 */
+
+/* 仅灰淡并禁用“二级子项”的占位标题，不影响父分组 */
+.vp-sidebar ul > li p.vp-sidebar-header > .vp-sidebar-title {
+    color: var(--vp-c-text-3);
+    opacity: 0.6;
+    cursor: default;
+    pointer-events: none;
+  }
+  
+  /* 兼容某些版本把占位渲染成空链接的情况（只命中二级） */
+//   .vp-sidebar ul ul > li > a.vp-sidebar-link[href=""],
+//   .vp-sidebar ul ul > li > a.vp-sidebar-link[href="#"] {
+//     color: var(--vp-c-text-3);
+//     opacity: 0.6;
+//     cursor: not-allowed;
+//     pointer-events: none;
+//   }
+
+/* 关闭浏览器全局平滑，避免与内置滚动叠加产生误差 */
+#main-content{
+    // scroll-behavior: auto;
+    padding-bottom: 200px;
+}
+// html { scroll-behavior: auto; }
+
+// /* 顶部偏移：按你的导航高度微调 */
+// :root { --anchor-offset: 96px; }
+// @media (max-width: 959px) { :root { --anchor-offset: 72px; } }
+
+// /* 标题锚点的顶部滚动余量 */
+// .vp-doc :is(h1,h2,h3,h4,h5,h6) {
+//   scroll-margin-top: var(--anchor-offset);
+// }
+
+// /* 关键：给内容加“足够的底部空间”，避免文末锚点被顶住对不准 */
+// .vp-doc {
+//   padding-bottom: max(50vh, calc(var(--anchor-offset) + 120px));
+//   /* 可按需调大/调小 50vh 或 120px */
+// }

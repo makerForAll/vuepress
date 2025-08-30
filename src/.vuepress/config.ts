@@ -3,14 +3,21 @@
 import { defineUserConfig } from "vuepress";
 import { hopeTheme } from "vuepress-theme-hope";
 import theme from "./theme.js";
-
+// import { searchPlugin } from "@vuepress/plugin-search";
+import { searchProPlugin } from "vuepress-plugin-search-pro";
 export default defineUserConfig({
   base: "/",
 
   lang: "zh-CN",
-  title: "文档演示",
-  description: "vuepress-theme-hope 的文档演示",
+  title: "数据文档",
+  description: "文档",
   theme,
+  plugins: [
+    searchProPlugin({
+      indexContent: true,
+      locales: { "/": { placeholder: "搜索文档..." } },
+    }),
+  ]
   // theme: hopeTheme({
   //   // 禁用“编辑此页”链接
   //   editLink: false,

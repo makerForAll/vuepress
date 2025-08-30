@@ -23,18 +23,84 @@ export default hopeTheme({
   // 侧边栏
   sidebar: [
     {
-      text: "@银龙房地产",
+      text: "更新说明",
+      icon: "icon-park:update-rotation",
+      link: "/siderbar/README.md",
+    },
+    {
+      text: "银龙实业(钢材大市场左侧)",
       prefix: "/",
+      collapsible: true,
+      expanded: false,
       children: [
         {
-          text: "基本介绍",
-          link: "/siderbar/ylfdc/ylfdc-base.md",
-          icon: "line-md:map-marker-loop",
+          text: "土地运营[未上线]",
+          // link: "/siderbar/ylsy/land.md",
+          children: [],
+          icon: "icon-park-outline:landscape",
+          // disabled: true
         },
         {
-          text: "#土地运营",
-          link: "/siderbar/ylfdc/ylfdc-land.md",
+          text: "不动产运营(厂房,综合楼)",
+          link: "/siderbar/ylsy/ylsy-shop.md",
+          icon: "fa6-solid:landmark",
+        }
+      ],
+    },
+    ,{
+      text: "银龙管业1(钢材大市场右侧)",
+      prefix: "/",
+      collapsible: true,
+      expanded: false,
+      children: [
+        {
+          text: "土地运营[未上线]",
+          // link: "/siderbar/ylgy1/land.md",
+          children: [],
           icon: "icon-park-outline:landscape",
+        },
+        {
+          text: "不动产运营(综合楼)",
+          link: "/siderbar/ylgy1/ylgy-shop.md",
+          icon: "fa6-solid:landmark",
+        }
+      ],
+    },{
+      text: "银龙管业2(大桥路)",
+      prefix: "/",
+      collapsible: true,
+      expanded: false,
+      children: [
+        {
+          text: "土地运营[未上线]",
+          // link: "/siderbar/ylgy2/land.md",
+          children: [],
+          icon: "icon-park-outline:landscape",
+        },
+        {
+          text: "不动产运营(厂房,综合楼)",
+          link: "/siderbar/ylgy2/ylgy-shop.md",
+          icon: "fa6-solid:landmark",
+        }
+      ],
+    },{
+      text: "银龙房地产",
+      prefix: "/",
+      collapsible: true,
+      expanded: false,
+      children: [
+        // {
+        //   text: "基本介绍",
+        //   link: "/siderbar/ylfdc/ylfdc-base.md",
+        //   icon: "line-md:map-marker-loop",
+        // },
+        {
+          text: "土地运营[未上线]",
+          // link: "#",
+          // link: "/siderbar/ylfdc/land.md",
+          children: [],
+          icon: "icon-park-outline:landscape",
+          // disabled: false,
         },
         {
           text: "#不动产1运营(商铺)",
@@ -42,57 +108,31 @@ export default hopeTheme({
           icon: "fa6-solid:landmark",
         },{
           text: "#不动产2运营(商品房,车位)",
-          link: "/siderbar/ylfdc/ylfdc-house.md",
+          // link: "/siderbar/ylfdc/ylfdc-house.md",
+          children: [],
           icon: "fluent:building-people-24-filled",
         },
       ],
     },{
-      text: "#银龙管业",
+      text: "武汉翔星",
       prefix: "/",
+      collapsible: true,
+      expanded: false,
       children: [
+        // {
+        //   text: "基本介绍",
+        //   link: "/zh/guide/README.md",
+        //   icon: "icon-park-outline:landscape",
+        // },
         {
-          text: "土地运营",
-          link: "/zh/guide/README.md",
+          text: "土地运营[未上线]",
+          // link: "/siderbar/whxx/land.md",
+          children: [],
           icon: "icon-park-outline:landscape",
         },
         {
-          text: "不动产1运营(厂房,综合楼)",
-          link: "/zh/guide/README.md",
-          icon: "fa6-solid:landmark",
-        }
-      ],
-    },{
-      text: "#银龙实业",
-      prefix: "/",
-      children: [
-        {
-          text: "土地运营",
-          link: "/zh/guide/README.md",
-          icon: "icon-park-outline:landscape",
-        },
-        {
-          text: "不动产1运营(厂房,综合楼)",
-          link: "/zh/guide/README.md",
-          icon: "fa6-solid:landmark",
-        }
-      ],
-    },{
-      text: "#武汉翔星",
-      prefix: "/",
-      children: [
-        {
-          text: "基本介绍",
-          link: "/zh/guide/README.md",
-          icon: "icon-park-outline:landscape",
-        },
-        {
-          text: "土地运营",
-          link: "/zh/guide/README.md",
-          icon: "icon-park-outline:landscape",
-        },
-        {
-          text: "不动产1运营(厂房,综合楼)",
-          link: "/zh/guide/README.md",
+          text: "不动产运营(厂房,综合楼)",
+          link: "/siderbar/whxx/whxx-shop.md",
           icon: "fa6-solid:landmark",
         }
       ],
@@ -101,11 +141,16 @@ export default hopeTheme({
 
   // 页脚
   footer: "如果链接失效，请联系管理员",
+  copyright: '© 2025 银龙集团 · All rights reserved',
   displayFooter: true,
 
   // 加密配置
   encrypt: {
     config: {
+      "/siderbar/": {
+        hint: "Password: 商铺常用密码",
+        password: "8819",
+      },
       "/demo/encrypt.html": {
         hint: "Password: 1234",
         password: "1234",
@@ -211,6 +256,14 @@ export default hopeTheme({
     components: {
       components: ["Badge", "VPCard"],
     },
+
+    // 启用客户端搜索，在导航栏显示搜索框
+    // searchPro: {
+    //   indexContent: true,
+    // },
+    // search: {
+    //   indexContent: true, // 可选：连正文一起索引
+    // },
 
     // icon: {
     //   assets: "iconify",
