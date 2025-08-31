@@ -23,7 +23,7 @@ export default hopeTheme({
   // 侧边栏
   sidebar: [
     {
-      text: "更新说明",
+      text: "说明",
       icon: "icon-park:update-rotation",
       link: "/siderbar/README.md",
     },
@@ -138,6 +138,7 @@ export default hopeTheme({
       ],
     },
   ],
+
 
   // 页脚
   footer: "如果链接失效，请联系管理员",

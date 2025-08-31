@@ -4,6 +4,7 @@ export default navbar([
   // "/",
   // "/portfolio",
   "/siderbar/",
+  "/siderbar2/"
   // {
   //   text: "指南",
   //   icon: "lightbulb",
