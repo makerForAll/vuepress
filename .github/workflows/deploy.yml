@@ -7,6 +7,11 @@ concurrency:
   group: deploy-${{ github.ref }}
   cancel-in-progress: true
 
+defaults:
+  run:
+    shell: bash
+    working-directory: .
+
 on:
   push:
     branches: [ main ]
