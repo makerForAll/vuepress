@@ -1,34 +1,83 @@
 name: Deploy Docs to OSS
 
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: true
+
 on:
   push:
     branches: [ main ]
+    paths:
+      - 'src/**'
+      - 'package.json'
+      - 'pnpm-lock.yaml'
+      - 'tsconfig.json'
+      - '.github/workflows/deploy.yml'
   workflow_dispatch: {}
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
 
       - name: Setup PNPM
         uses: pnpm/action-setup@v3
         with:
           version: 9
 
+      - name: Verify workspace
+        run: |
+          pwd
+          ls -la
+        working-directory: .
+
+      - name: Preflight secrets
+        run: |
+          [[ -n "${{ secrets.OSS_ENDPOINT }}" ]] || { echo "OSS_ENDPOINT missing"; exit 1; }
+          [[ -n "${{ secrets.OSS_AK }}" ]] || { echo "OSS_AK missing"; exit 1; }
+          [[ -n "${{ secrets.OSS_SK }}" ]] || { echo "OSS_SK missing"; exit 1; }
+          [[ -n "${{ secrets.OSS_BUCKET }}" ]] || { echo "OSS_BUCKET missing"; exit 1; }
+        working-directory: .
+
       - name: Install deps
         run: pnpm i --frozen-lockfile
-        working-directory: my-docs
+        working-directory: .
 
       - name: Build VuePress
         run: pnpm run docs:build
-        working-directory: my-docs
+        working-directory: .
+
+      - name: Verify build output
+        run: |
+          test -d src/.vuepress/dist
+          test "$(ls -A src/.vuepress/dist)"
+        working-directory: .
+
+      - name: Upload dist artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-dist
+          path: src/.vuepress/dist
+          if-no-files-found: error
+          retention-days: 7
 
       - name: Download ossutil64
         run: |
-          curl -fsSL http://gosspublic.alicdn.com/ossutil/1.7.17/ossutil64 -o ossutil64
+          curl -fsSL https://gosspublic.alicdn.com/ossutil/1.7.17/ossutil64 -o ossutil64
           chmod +x ossutil64
+        working-directory: .
 
       - name: Config ossutil
         env:
@@ -37,25 +86,25 @@ jobs:
           OSS_SK: ${{ secrets.OSS_SK }}
         run: |
           ./ossutil64 config -e "$OSS_ENDPOINT" -i "$OSS_AK" -k "$OSS_SK" -L CH
+        working-directory: .
 
       - name: Upload to OSS (sync root)
         env:
           OSS_BUCKET: ${{ secrets.OSS_BUCKET }}
         run: |
-          # 清空目标桶根目录(谨慎)，如需保留历史请改为版本目录发布
-          ./ossutil64 rm -r oss://$OSS_BUCKET/ -f || true
-          ./ossutil64 cp -r my-docs/src/.vuepress/dist/ oss://$OSS_BUCKET/ --meta "Cache-Control:no-store" --meta-sync=skip
-          # 为 /assets/ 资源设置长缓存
+          ./ossutil64 cp -r src/.vuepress/dist/ oss://$OSS_BUCKET/ --meta "Cache-Control:no-store" --meta-sync=skip
           ./ossutil64 set-meta oss://$OSS_BUCKET/assets/ "Cache-Control:public,max-age=31536000,immutable" --update || true
+        working-directory: .
 
-      # 你也可以改为“版本目录发布 + 原子切换”，示例：
-      # - name: Upload to versioned dir
-      #   env:
-      #     OSS_BUCKET: ${{ secrets.OSS_BUCKET }}
-      #   run: |
-      #     VERSION=$(date +"%Y%m%d-%H%M%S")
-      #     ./ossutil64 cp -r my-docs/src/.vuepress/dist/ oss://$OSS_BUCKET/releases/$VERSION/
-      #     # 复制 index.html 到根以切换版本(assets 使用 hash 名称，可长期缓存)
-      #     ./ossutil64 cp oss://$OSS_BUCKET/releases/$VERSION/index.html oss://$OSS_BUCKET/index.html -f --meta "Cache-Control:no-store"
-
+      # 可选：CDN 刷新占位（根据你的 CDN 服务替换为实际实现）
+      - name: Refresh CDN (optional)
+        if: env.CDN_ENABLE == 'true'
+        env:
+          CDN_ENABLE: ${{ secrets.CDN_ENABLE }}
+          CDN_DOMAIN: ${{ secrets.CDN_DOMAIN }}
+          OSS_AK: ${{ secrets.OSS_AK }}
+          OSS_SK: ${{ secrets.OSS_SK }}
+        run: |
+          echo "CDN refresh placeholder. Replace with aliyun-cli or Cloudflare API as needed."
+        working-directory: .
 
