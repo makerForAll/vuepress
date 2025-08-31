@@ -99,7 +99,7 @@ jobs:
         env:
           OSS_BUCKET: ${{ secrets.OSS_BUCKET }}
         run: |
-          ./ossutil64 cp -r src/.vuepress/dist/ oss://$OSS_BUCKET/ --meta "Cache-Control:no-store" --meta-sync=skip
+          ./ossutil64 cp -r src/.vuepress/dist/ oss://$OSS_BUCKET/ --meta "Cache-Control:no-store"
           ./ossutil64 set-meta oss://$OSS_BUCKET/assets/ "Cache-Control:public,max-age=31536000,immutable" --update || true
         working-directory: .
 
