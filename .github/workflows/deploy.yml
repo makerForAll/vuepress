@@ -1,0 +1,61 @@
+name: Deploy Docs to OSS
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch: {}
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v3
+        with:
+          version: 9
+
+      - name: Install deps
+        run: pnpm i --frozen-lockfile
+        working-directory: my-docs
+
+      - name: Build VuePress
+        run: pnpm run docs:build
+        working-directory: my-docs
+
+      - name: Download ossutil64
+        run: |
+          curl -fsSL http://gosspublic.alicdn.com/ossutil/1.7.17/ossutil64 -o ossutil64
+          chmod +x ossutil64
+
+      - name: Config ossutil
+        env:
+          OSS_ENDPOINT: ${{ secrets.OSS_ENDPOINT }}
+          OSS_AK: ${{ secrets.OSS_AK }}
+          OSS_SK: ${{ secrets.OSS_SK }}
+        run: |
+          ./ossutil64 config -e "$OSS_ENDPOINT" -i "$OSS_AK" -k "$OSS_SK" -L CH
+
+      - name: Upload to OSS (sync root)
+        env:
+          OSS_BUCKET: ${{ secrets.OSS_BUCKET }}
+        run: |
+          # 清空目标桶根目录(谨慎)，如需保留历史请改为版本目录发布
+          ./ossutil64 rm -r oss://$OSS_BUCKET/ -f || true
+          ./ossutil64 cp -r my-docs/src/.vuepress/dist/ oss://$OSS_BUCKET/ --meta "Cache-Control:no-store" --meta-sync=skip
+          # 为 /assets/ 资源设置长缓存
+          ./ossutil64 set-meta oss://$OSS_BUCKET/assets/ "Cache-Control:public,max-age=31536000,immutable" --update || true
+
+      # 你也可以改为“版本目录发布 + 原子切换”，示例：
+      # - name: Upload to versioned dir
+      #   env:
+      #     OSS_BUCKET: ${{ secrets.OSS_BUCKET }}
+      #   run: |
+      #     VERSION=$(date +"%Y%m%d-%H%M%S")
+      #     ./ossutil64 cp -r my-docs/src/.vuepress/dist/ oss://$OSS_BUCKET/releases/$VERSION/
+      #     # 复制 index.html 到根以切换版本(assets 使用 hash 名称，可长期缓存)
+      #     ./ossutil64 cp oss://$OSS_BUCKET/releases/$VERSION/index.html oss://$OSS_BUCKET/index.html -f --meta "Cache-Control:no-store"
+
+
