@@ -72,20 +72,20 @@ pageInfo: false
 | 1172   | 报表  | 合同法务报表 |点击|::game-icons:light-bulb =32:: |
 | 1173   | 报表 | 合同租金报表【】 |点击|::game-icons:light-bulb =32:: |
 
-## 法务相关
+## 法务1-围绕合同-签约/解约-资料
 
 | 编号    | 关键词    | 功能    | 链接 ::weui:lock-filled =32::|状态|
 |---------------- | --------------- | --------------- | ----|---|
 | 1180   | 表单   | 提交信息窗口(密码:8888)->后台审核汇总   |点击|::game-icons:light-bulb =32:: |
-| 1181   | 资料模板  | 5-7楼住宅区域租赁合同模板(个人) |[点击](https://nocodb.yljt.info/dashboard/#/nc/p09pyzg4zby7cgg/m08isodby3wvm44)|::noto:light-bulb =32:: |
-| 1182   | 资料模板  | 3-4楼办公区域租赁合同模板(个人/公司(缺少)) |[点击](https://nocodb.yljt.info/dashboard/#/nc/p09pyzg4zby7cgg/mk0cyrujigthpgj)|::noto:light-bulb =32:: |
-| 1183   | 资料模板  | 1楼商铺合同模板(个人/公司) |点击|::game-icons:light-bulb =32:: |
-| 1184   | 资料模板  | 解除协议模板(个人/公司) |点击|::game-icons:light-bulb =32:: |
-| 1185   | 资料模板  | 催缴通知书(以后完善) |点击|::game-icons:light-bulb =32:: |
-
----
+| 1181   | 签约模板  | 5-7楼住宅区域租赁合同模板(个人) |[点击](https://nocodb.yljt.info/dashboard/#/nc/p09pyzg4zby7cgg/m08isodby3wvm44)|::noto:light-bulb =32:: |
+| 1182   | 签约模板  | 3-4楼办公区域租赁合同模板(个人/公司(缺少)) |[点击](https://nocodb.yljt.info/dashboard/#/nc/p09pyzg4zby7cgg/mk0cyrujigthpgj)|::noto:light-bulb =32:: |
+| 1183   | 签约模板  | 1楼商铺合同模板(个人/公司) |点击|::game-icons:light-bulb =32:: |
+|  1188   | 签约附件[通用]  | 承诺函 |[点击](https://nocodb.yljt.info/dashboard/#/nc/pdpso6qkpf3750c/m7tlrrg0wutn8in)|::noto:light-bulb =32:: |
+| 1189   | 解约模板  | 解除协议模板(个人/公司) |点击|::game-icons:light-bulb =32:: |
 
 
-
-
-
+## 法务2-入驻后的相关资料
+| 编号    | 关键词    | 功能    | 链接 ::weui:lock-filled =32::|状态|
+|---------------- | --------------- | --------------- | ----|---|
+| 1190   | 表单   | 提交信息窗口(密码:8888)->后台审核汇总   |点击|::game-icons:light-bulb =32:: |
+| 1191   | 催缴资料  | 催缴通知书(以后完善) |点击|::game-icons:light-bulb =32:: |

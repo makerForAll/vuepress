@@ -70,11 +70,17 @@ pageInfo: false
 | 4172   | 报表  | 合同法务报表 |点击|::game-icons:light-bulb =32:: |
 | 4173   | 报表 | 合同租金报表【】 |点击|::game-icons:light-bulb =32:: |
 
-## 法务相关
+## 法务1-围绕合同-签约/解约-资料
 
 | 编号    | 关键词    | 功能    | 链接 ::weui:lock-filled =32::|状态|
 |---------------- | --------------- | --------------- | ----|---|
 | 4180   | 表单   | 提交信息窗口(密码:8888)->后台审核汇总   |点击| ::game-icons:light-bulb =32:: |
-| 4181   | 资料模板  | 商铺-合同模板(个人/公司(缺少)) |[点击](https://nocodb.yljt.info/dashboard/#/nc/pssn8s7w09znsdj/mu49buplmwsrwoa)| ::noto:light-bulb =32:: |
-| 4182   | 资料模板  | 解除协议模板(个人/公司) |点击| ::game-icons:light-bulb =32:: |
-| 4183   | 资料模板  | 催缴通知书 |点击| ::game-icons:light-bulb =32:: |
+| 4181   | 签约模板  | 商铺-合同模板(个人/公司(缺少) |[点击](https://nocodb.yljt.info/dashboard/#/nc/pssn8s7w09znsdj/mu49buplmwsrwoa)| ::noto:light-bulb =32:: |
+|  4188   | 签约附件[通用]  | 承诺函 |[点击](https://nocodb.yljt.info/dashboard/#/nc/pdpso6qkpf3750c/m7tlrrg0wutn8in)|::noto:light-bulb =32:: |
+| 4189   | 解约模板  | 解除协议模板(个人/公司) |点击|::game-icons:light-bulb =32:: |
+
+## 法务2-入驻后的相关资料
+| 编号    | 关键词    | 功能    | 链接 ::weui:lock-filled =32::|状态|
+|---------------- | --------------- | --------------- | ----|---|
+| 1190   | 表单   | 提交信息窗口(密码:8888)->后台审核汇总   |点击|::game-icons:light-bulb =32:: |
+| 1191   | 催缴资料  | 催缴通知书(以后完善) |点击|::game-icons:light-bulb =32:: |
