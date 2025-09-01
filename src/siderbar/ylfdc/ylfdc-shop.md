@@ -37,7 +37,7 @@ pageInfo: false
 |---------------- | --------------- | --------------- | ----|----|
 | 4120   | 素材  | 商铺广告视频素材 |查看 |::game-icons:light-bulb =32:: |
 | 4121   | 素材  | 商铺广告图片素材 | 录入 |::game-icons:light-bulb =32:: |
-| 4122   | 资料  | 租赁-俯视图信息 |点击|::game-icons:light-bulb =32:: |
+| 4122   | 资料  | 租赁-俯视图信息 |[点击](https://nocodb.yljt.info/dashboard/#/nc/pteji0a5txq3drk/md8jj6l7su4k4g6)|::noto:light-bulb =32::  |
 | 4123   | 资料  | 买卖-俯视图信息 |点击|::game-icons:light-bulb =32:: |
 | 4124   | 资料  | 商铺-CAD图 |点击|::game-icons:light-bulb =32:: |
 | 4125   | 资料  | 商铺-房产证[商户办理证][灰白水印版本] |点击|::game-icons:light-bulb =32:: |
