@@ -66,6 +66,13 @@ jobs:
         run: pnpm run docs:build
         working-directory: .
 
+      - name: Write build id
+        run: |
+          SHORT_SHA=$(git rev-parse --short HEAD)
+          echo "$SHORT_SHA" > src/.vuepress/dist/__BUILD__.txt
+          date -u "+%Y-%m-%dT%H:%M:%SZ" >> src/.vuepress/dist/__BUILD__.txt
+        working-directory: .
+
       - name: Verify build output
         run: |
           test -d src/.vuepress/dist
@@ -99,11 +106,21 @@ jobs:
         env:
           OSS_BUCKET: ${{ secrets.OSS_BUCKET }}
         run: |
-          ./ossutil64 cp -r src/.vuepress/dist/ oss://$OSS_BUCKET/ --meta "Cache-Control:no-store"
+          ./ossutil64 cp -r --update src/.vuepress/dist/ oss://$OSS_BUCKET/ --meta "Cache-Control:no-store"
           ./ossutil64 set-meta oss://$OSS_BUCKET/assets/ "Cache-Control:public,max-age=31536000,immutable" --update || true
         working-directory: .
 
-      # 可选：CDN 刷新占位（根据你的 CDN 服务替换为实际实现）
+      - name: Verify OSS updated
+        env:
+          OSS_BUCKET: ${{ secrets.OSS_BUCKET }}
+          OSS_ENDPOINT: ${{ secrets.OSS_ENDPOINT }}
+        run: |
+          SHORT_SHA=$(git rev-parse --short HEAD)
+          curl -fsSL "https://$OSS_BUCKET.$OSS_ENDPOINT/__BUILD__.txt" | tee build_id_oss.txt
+          grep -q "$SHORT_SHA" build_id_oss.txt
+        working-directory: .
+
+      # 可选：刷新 CDN 并校验 (仅刷新入口 HTML)
       - name: Refresh CDN (optional)
         if: env.CDN_ENABLE == 'true'
         env:
@@ -112,6 +129,12 @@ jobs:
           OSS_AK: ${{ secrets.OSS_AK }}
           OSS_SK: ${{ secrets.OSS_SK }}
         run: |
-          echo "CDN refresh placeholder. Replace with aliyun-cli or Cloudflare API as needed."
+          echo "CDN refresh placeholder. Replace with provider API as needed."
+          # 校验 CDN 是否可回源获取新版本 (利用查询参数绕缓存)
+          SHORT_SHA=$(git rev-parse --short HEAD)
+          curl -fsSL "https://$CDN_DOMAIN/__BUILD__.txt?v=$GITHUB_SHA" | tee build_id_cdn.txt || true
+          if [ -s build_id_cdn.txt ]; then
+            echo "CDN build id:"; cat build_id_cdn.txt || true
+          fi
         working-directory: .
 
