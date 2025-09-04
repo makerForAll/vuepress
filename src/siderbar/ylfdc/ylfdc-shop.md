@@ -41,7 +41,7 @@ pageInfo: false
 | 4123   | 资料  | 买卖-俯视图信息 |点击|::game-icons:light-bulb =32:: |
 | 4124   | 资料  | 商铺-CAD图 |点击|::game-icons:light-bulb =32:: |
 | 4125   | 资料  | 商铺-房产证[商户办理证][灰白水印版本] |点击|::game-icons:light-bulb =32:: |
-| 4126   | 资料  | 商铺-测绘报告电子版 |点击|::game-icons:light-bulb =32:: |
+| 4126   | 资料  | 商铺-测绘报告电子版 |[点击](https://nocodb.yljt.info/dashboard/#/nc/pteji0a5txq3drk/m7vad0vvsh4o7lx)|::noto:light-bulb =32:: |
 
 ## 招商经纪人
 
@@ -75,7 +75,7 @@ pageInfo: false
 | 编号    | 关键词    | 功能    | 链接 ::weui:lock-filled =32::|状态|
 |---------------- | --------------- | --------------- | ----|---|
 | 4180   | 表单   | 提交信息窗口(密码:8888)->后台审核汇总   |点击| ::game-icons:light-bulb =32:: |
-| 4181   | 签约模板  | 商铺-合同模板(个人/公司(缺少) |[点击](https://nocodb.yljt.info/dashboard/#/nc/pssn8s7w09znsdj/mu49buplmwsrwoa)| ::noto:light-bulb =32:: |
+| 4181   | 签约模板  | 商铺-合同模板(个人/公司) |[点击](https://nocodb.yljt.info/dashboard/#/nc/pssn8s7w09znsdj/mu49buplmwsrwoa)| ::noto:light-bulb =32:: |
 |  4188   | 签约附件[通用]  | 承诺函 |[点击](https://nocodb.yljt.info/dashboard/#/nc/pdpso6qkpf3750c/m7tlrrg0wutn8in)|::noto:light-bulb =32:: |
 | 4189   | 解约模板  | 解除协议模板(个人/公司) |点击|::game-icons:light-bulb =32:: |
 
