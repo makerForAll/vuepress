@@ -79,7 +79,7 @@ pageInfo: false
 | 1180   | 表单   | 提交信息窗口(密码:8888)->后台审核汇总   |点击|::game-icons:light-bulb =32:: |
 | 1181   | 签约模板  | 5-7楼住宅区域租赁合同模板(个人) |[点击](https://nocodb.yljt.info/dashboard/#/nc/p09pyzg4zby7cgg/m08isodby3wvm44)|::noto:light-bulb =32:: |
 | 1182   | 签约模板  | 3-4楼办公区域租赁合同模板(个人/公司(缺少)) |[点击](https://nocodb.yljt.info/dashboard/#/nc/p09pyzg4zby7cgg/mk0cyrujigthpgj)|::noto:light-bulb =32:: |
-| 1183   | 签约模板  | 1楼商铺合同模板(个人/公司) |点击|::game-icons:light-bulb =32:: |
+| 1183   | 签约模板  | 1楼商铺合同模板(个人/公司) |[点击](https://nocodb.yljt.info/dashboard/#/nc/p09pyzg4zby7cgg/mgk332142eewdc9)|::noto:light-bulb =32:: |
 |  1188   | 签约附件[通用]  | 承诺函 |[点击](https://nocodb.yljt.info/dashboard/#/nc/pdpso6qkpf3750c/m7tlrrg0wutn8in)|::noto:light-bulb =32:: |
 | 1189   | 解约模板  | 解除协议模板(个人/公司) |点击|::game-icons:light-bulb =32:: |
 
