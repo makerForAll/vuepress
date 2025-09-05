@@ -15,7 +15,9 @@ pageInfo: false
 
 # 武汉翔星-业务信息目录
 
-<!-- ![银海龙城-商铺区域](./shopmap.jpg) -->
+<!-- <div width='auto'>![武汉翔星-区域](./whxx-map.jpg)</div> -->
+
+![武汉翔星-区域 =500x](./whxx-map.jpg)
 
 有的内容需要 账号权限，请联系管理员【注册/授权】
 
