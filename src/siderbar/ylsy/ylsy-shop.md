@@ -58,7 +58,7 @@ pageInfo: false
 | 编号    | 关键词    | 功能    | 链接  ::weui:lock-filled =32::| 状态 |
 |---------------- | --------------- | --------------- | ----|----|
 | 1161   | 表单 | 提交信息窗口(密码:8888)->后台审核汇总  |点击|::game-icons:light-bulb =32:: |
-| 1162    | 信息查询    | 查看租赁合同(所有)   |[点击](https://nocodb.yljt.info/dashboard/#/nc/p9j0dgqznz3fpsm/mcx6i3z4g1h2kmu/vwfwbaek32ypvyj1)|::game-icons:light-bulb =32::  |
+| 1162    | 信息查询    | 查看租赁合同(所有)   |[点击]|::game-icons:light-bulb =32::  |
 | 1163   | 信息查询   | 查看租赁合同(欠缴)  |点击|::game-icons:light-bulb =32:: |
 | 1164   | 信息查询  | 租赁合同法务(欠缴)   |点击|::game-icons:light-bulb =32:: |
 

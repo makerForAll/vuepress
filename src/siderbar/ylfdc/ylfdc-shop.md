@@ -47,18 +47,33 @@ pageInfo: false
 
 | 编号    | 关键词   | 功能    | 链接  ::weui:lock-filled =32::| 状态 |
 |---------------- | --------------- | --------------- | ----|----|
-| 4150   | 表单  | 提交窗口 |查看 |::game-icons:light-bulb =32:: |
-| 4151   | 信息  | 经纪人-客户信息管理 | 录入 |::game-icons:light-bulb =32:: |
-| 4152   | 信息  | 计算工具(开发中) |点击|::game-icons:light-bulb =32:: |
+| 4140   | 表单  | 提交窗口 |查看 |::game-icons:light-bulb =32:: |
+| 4141   | 信息  | 经纪人-客户信息管理 | 录入 |::game-icons:light-bulb =32:: |
+| 4142   | 信息  | 计算工具(开发中) |点击|::game-icons:light-bulb =32:: |
+
+## 合同运营0 【合同系统-排查问题用】
+
+| 编号    | 关键词    | 排查描述   |相关功能  | 链接  ::weui:lock-filled =32::|状态|
+|---------------- | --------------- | ----- |--------------- | ----|--|
+| 4150   | 数据排查   | 确认关联的明细是否漏掉  | 合同-查阅明细  |[点击](https://nocodb.yljt.info/dashboard/#/nc/p9j0dgqznz3fpsm/mrz6uw1ju9efh2n/vw06kfx9d7ntpily)|::noto:light-bulb =32:: |
+| 4151   | 数据排查  | 每个合同最后一期是否标识 | 合同-到期提醒 |[点击](https://nocodb.yljt.info/dashboard/#/nc/p9j0dgqznz3fpsm/mrz6uw1ju9efh2n/vwb1yjumq4lprz3w)|::noto:light-bulb =32:: |
+>
 
 ## 合同运营1
 
+<!-- | 4160   | 表单 | 提交信息窗口(密码:8888)->后台审核汇总  |点击|::game-icons:light-bulb =32:: | -->
 | 编号    | 关键词    | 功能    | 链接  ::weui:lock-filled =32::| 状态 |
-|---------------- | --------------- | --------------- | ----|----|
-| 4160   | 表单 | 提交信息窗口(密码:8888)->后台审核汇总  |点击|::game-icons:light-bulb =32:: |
-| 4161    | 信息查询    | 查看租赁合同(所有)   |[点击](https://nocodb.yljt.info/dashboard/#/nc/p9j0dgqznz3fpsm/mcx6i3z4g1h2kmu/vwfwbaek32ypvyj1)|::game-icons:light-bulb =32:: |
-| 4162   | 信息查询   | 查看租赁合同(欠缴)  |点击|::game-icons:light-bulb =32:: |
-| 4163   | 信息查询  | 租赁合同法务(欠缴)   |点击|::game-icons:light-bulb =32:: |
+|---------------- | --------------- | -------------- | ----|----|
+| 4160    | 信息查询    | 查看租赁合同(所有)   |[点击](https://nocodb.yljt.info/dashboard/#/nc/p9j0dgqznz3fpsm/mcx6i3z4g1h2kmu/vwfwbaek32ypvyj1)|::noto:light-bulb =32:: |
+| 4161   | 信息查询   | 未归档@1_1履约合同-常规  |[点击](https://nocodb.yljt.info/dashboard/#/nc/p9j0dgqznz3fpsm/mcx6i3z4g1h2kmu/vwyk8cmszjfimc2x)|::noto:light-bulb =32:: |
+| 4162   | 信息查询  | 未归档@1_2履约合同-近期待缴租金   |[点击](https://nocodb.yljt.info/dashboard/#/nc/p9j0dgqznz3fpsm/mcx6i3z4g1h2kmu/vw15m7evm0w8n1qe)|::noto:light-bulb =32:: |
+| 4163   | 信息查询  | 未归档@1_3履约合同-近期到期(是否续)   |[点击](https://nocodb.yljt.info/dashboard/#/nc/p9j0dgqznz3fpsm/mcx6i3z4g1h2kmu/vw3r8loha0tv0cao)|::noto:light-bulb =32:: |
+| 4164   | 信息查询  | 未归档@2_0欠缴合同-保护期(特殊)   |[点击](https://nocodb.yljt.info/dashboard/#/nc/p9j0dgqznz3fpsm/mcx6i3z4g1h2kmu/vwrlnczzqllcnem1)|::noto:light-bulb =32:: |
+| 4165   | 信息查询  | 未归档@2_1欠缴合同-协商期   |[点击](https://nocodb.yljt.info/dashboard/#/nc/p9j0dgqznz3fpsm/mcx6i3z4g1h2kmu/vwvybbgej109p1x3)|::noto:light-bulb =32:: |
+| 4166   | 信息查询  | 未归档@2_2欠缴合同-涉诉期   |[点击](https://nocodb.yljt.info/dashboard/#/nc/p9j0dgqznz3fpsm/mcx6i3z4g1h2kmu/vwr3p08fzftb08m8)|::noto:light-bulb =32:: |
+| 4167   | 信息查询  | 已归档@3-1欠缴合同-协商期   |[点击](https://nocodb.yljt.info/dashboard/#/nc/p9j0dgqznz3fpsm/mcx6i3z4g1h2kmu/vwhqk79lkdx4bd9c)|::noto:light-bulb =32:: |
+| 4168   | 信息查询  | 已归档@3-2欠缴合同-涉诉期   |[点击](https://nocodb.yljt.info/dashboard/#/nc/p9j0dgqznz3fpsm/mcx6i3z4g1h2kmu/vwf2xy4lro0lwxjd)|::noto:light-bulb =32:: |
+| 4169   | 信息查询  | 已归档@4-*解约合同-手续完善  |[点击](https://nocodb.yljt.info/dashboard/#/nc/p9j0dgqznz3fpsm/mcx6i3z4g1h2kmu/vwmllfn5varffjug)|::noto:light-bulb =32:: |
 
 
 ## 合同运营2
@@ -69,6 +84,8 @@ pageInfo: false
 | 4171   | 报表  | 合同签约近况报表 |点击|::game-icons:light-bulb =32:: |
 | 4172   | 报表  | 合同法务报表 |点击|::game-icons:light-bulb =32:: |
 | 4173   | 报表 | 合同租金报表【】 |点击|::game-icons:light-bulb =32:: |
+
+
 
 ## 法务1-围绕合同-签约/解约-资料
 
