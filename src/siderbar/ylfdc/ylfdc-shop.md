@@ -43,6 +43,9 @@ pageInfo: false
 | 4125   | 资料  | 商铺-房产证[商户办理证][灰白水印版本] |点击|::game-icons:light-bulb =32:: |
 | 4126   | 资料  | 商铺-测绘报告电子版 |[点击](https://nocodb.yljt.info/dashboard/#/nc/pteji0a5txq3drk/m7vad0vvsh4o7lx)|::noto:light-bulb =32:: |
 
+## 财务相关记录
+
+
 ## 招商经纪人
 
 | 编号    | 关键词   | 功能    | 链接  ::weui:lock-filled =32::| 状态 |
@@ -60,11 +63,13 @@ pageInfo: false
 >
 
 ## 合同运营1
-
+![功能详细-说明 =100x](./htyyreadme.jpg)
 <!-- | 4160   | 表单 | 提交信息窗口(密码:8888)->后台审核汇总  |点击|::game-icons:light-bulb =32:: | -->
 | 编号    | 关键词    | 功能    | 链接  ::weui:lock-filled =32::| 状态 |
 |---------------- | --------------- | -------------- | ----|----|
 | 4160    | 信息查询    | 查看租赁合同(所有)   |[点击](https://nocodb.yljt.info/dashboard/#/nc/p9j0dgqznz3fpsm/mcx6i3z4g1h2kmu/vwfwbaek32ypvyj1)|::noto:light-bulb =32:: |
+
+<!-- 
 | 4161   | 信息查询   | 未归档@1_1履约合同-常规  |[点击](https://nocodb.yljt.info/dashboard/#/nc/p9j0dgqznz3fpsm/mcx6i3z4g1h2kmu/vwyk8cmszjfimc2x)|::noto:light-bulb =32:: |
 | 4162   | 信息查询  | 未归档@1_2履约合同-近期待缴租金   |[点击](https://nocodb.yljt.info/dashboard/#/nc/p9j0dgqznz3fpsm/mcx6i3z4g1h2kmu/vw15m7evm0w8n1qe)|::noto:light-bulb =32:: |
 | 4163   | 信息查询  | 未归档@1_3履约合同-近期到期(是否续)   |[点击](https://nocodb.yljt.info/dashboard/#/nc/p9j0dgqznz3fpsm/mcx6i3z4g1h2kmu/vw3r8loha0tv0cao)|::noto:light-bulb =32:: |
@@ -74,7 +79,7 @@ pageInfo: false
 | 4167   | 信息查询  | 已归档@3-1欠缴合同-协商期   |[点击](https://nocodb.yljt.info/dashboard/#/nc/p9j0dgqznz3fpsm/mcx6i3z4g1h2kmu/vwhqk79lkdx4bd9c)|::noto:light-bulb =32:: |
 | 4168   | 信息查询  | 已归档@3-2欠缴合同-涉诉期   |[点击](https://nocodb.yljt.info/dashboard/#/nc/p9j0dgqznz3fpsm/mcx6i3z4g1h2kmu/vwf2xy4lro0lwxjd)|::noto:light-bulb =32:: |
 | 4169   | 信息查询  | 已归档@4-*解约合同-手续完善  |[点击](https://nocodb.yljt.info/dashboard/#/nc/p9j0dgqznz3fpsm/mcx6i3z4g1h2kmu/vwmllfn5varffjug)|::noto:light-bulb =32:: |
-
+ -->
 
 ## 合同运营2
 
@@ -99,5 +104,7 @@ pageInfo: false
 ## 法务2-入驻后的相关资料
 | 编号    | 关键词    | 功能    | 链接 ::weui:lock-filled =32::|状态|
 |---------------- | --------------- | --------------- | ----|---|
-| 1190   | 表单   | 提交信息窗口(密码:8888)->后台审核汇总   |点击|::game-icons:light-bulb =32:: |
-| 1191   | 催缴资料  | 催缴通知书(以后完善) |点击|::game-icons:light-bulb =32:: |
+| 4190   | 表单   | 提交信息窗口(密码:8888)->后台审核汇总   |点击|::game-icons:light-bulb =32:: |
+| 4191   | 催缴资料  | 催缴通知书(以后完善) |点击|::game-icons:light-bulb =32:: |
+
+
