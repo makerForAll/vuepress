@@ -67,7 +67,8 @@ pageInfo: false
 <!-- | 4160   | 表单 | 提交信息窗口(密码:8888)->后台审核汇总  |点击|::game-icons:light-bulb =32:: | -->
 | 编号    | 关键词    | 功能    | 链接  ::weui:lock-filled =32::| 状态 |
 |---------------- | --------------- | -------------- | ----|----|
-| 4160    | 信息查询    | 查看租赁合同(所有)   |[点击](https://nocodb.yljt.info/dashboard/#/nc/p9j0dgqznz3fpsm/mcx6i3z4g1h2kmu/vwfwbaek32ypvyj1)|::noto:light-bulb =32:: |
+| 4160    | 信息查询    | 待处理合同   |[点击](https://nocodb.yljt.info/dashboard/#/nc/view/d3d295b4-c15a-49c6-a13d-0096b850358f)|::noto:light-bulb =32:: |
+| 4161    | 信息查询    | 已处理合同   |[点击](https://nocodb.yljt.info/dashboard/#/nc/view/846a5015-b60f-4a58-a068-7fa182af4bbf)|::noto:light-bulb =32:: |
 
 <!-- 
 | 4161   | 信息查询   | 未归档@1_1履约合同-常规  |[点击](https://nocodb.yljt.info/dashboard/#/nc/p9j0dgqznz3fpsm/mcx6i3z4g1h2kmu/vwyk8cmszjfimc2x)|::noto:light-bulb =32:: |
