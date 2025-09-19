@@ -30,6 +30,7 @@ pageInfo: false
 | 4111   | 资料  |商铺相关文件管理【电子版】【线下档案室】 | 录入 |::game-icons:light-bulb =32:: |
 | 4112   | 媒体  | 媒体，广告相关 |点击|::game-icons:light-bulb =32:: |
 | 4113   | 信息  | 官方-客户信息管理 |点击|::game-icons:light-bulb =32:: |
+| 4114   | 信息   | 商铺销控图  |[点击](https://nocodb.yljt.info/dashboard/#/nc/view/43edcca6-2b52-4540-8e1e-803f8881a851)|::noto:light-bulb =32:: |
 
 ## 不动产管理2
 
@@ -63,7 +64,7 @@ pageInfo: false
 >
 
 ## 合同运营1
-![功能详细-说明 =100x](./htyyreadme.jpg)
+<!-- ![功能详细-说明 =100x](./htyyreadme.jpg) -->
 <!-- | 4160   | 表单 | 提交信息窗口(密码:8888)->后台审核汇总  |点击|::game-icons:light-bulb =32:: | -->
 | 编号    | 关键词    | 功能    | 链接  ::weui:lock-filled =32::| 状态 |
 |---------------- | --------------- | -------------- | ----|----|
@@ -71,7 +72,7 @@ pageInfo: false
 | 4161    | 信息查询    | 已处理合同   |[点击](https://nocodb.yljt.info/dashboard/#/nc/view/846a5015-b60f-4a58-a068-7fa182af4bbf)|::noto:light-bulb =32:: |
 
 <!-- 
-| 4161   | 信息查询   | 未归档@1_1履约合同-常规  |[点击](https://nocodb.yljt.info/dashboard/#/nc/p9j0dgqznz3fpsm/mcx6i3z4g1h2kmu/vwyk8cmszjfimc2x)|::noto:light-bulb =32:: |
+
 | 4162   | 信息查询  | 未归档@1_2履约合同-近期待缴租金   |[点击](https://nocodb.yljt.info/dashboard/#/nc/p9j0dgqznz3fpsm/mcx6i3z4g1h2kmu/vw15m7evm0w8n1qe)|::noto:light-bulb =32:: |
 | 4163   | 信息查询  | 未归档@1_3履约合同-近期到期(是否续)   |[点击](https://nocodb.yljt.info/dashboard/#/nc/p9j0dgqznz3fpsm/mcx6i3z4g1h2kmu/vw3r8loha0tv0cao)|::noto:light-bulb =32:: |
 | 4164   | 信息查询  | 未归档@2_0欠缴合同-保护期(特殊)   |[点击](https://nocodb.yljt.info/dashboard/#/nc/p9j0dgqznz3fpsm/mcx6i3z4g1h2kmu/vwrlnczzqllcnem1)|::noto:light-bulb =32:: |
